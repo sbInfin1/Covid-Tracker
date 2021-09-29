@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="property"
+            type="android.example.covid_tracker_remastered.network.CovidProperty" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pane"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/state_name_textview"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="country"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="2"
+            android:textAllCaps="true"
+            android:textColor="@color/textColorHighlight"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.518" />
+
+        <TextView
+            android:id="@+id/total_confirmed_textview"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:text="cases"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1"
+            android:textAllCaps="true"
+            android:textColor="@color/textColorHighlight"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/state_name_textview"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/daily_confirmed_textview"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1"
+            android:text="todayCases"
+            android:textAllCaps="true"
+            android:textColor="@color/textColorOvershadow"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/total_confirmed_textview"
+            app:layout_constraintTop_toBottomOf="@+id/total_confirmed_textview"
+            app:layout_constraintVertical_bias="0.027" />
+
+        <TextView
+            android:id="@+id/total_deaths_textview"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1"
+            android:text="deaths"
+            android:textAllCaps="true"
+            android:textColor="@color/textColorHighlight"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/total_confirmed_textview"
+            app:layout_constraintStart_toEndOf="@+id/total_confirmed_textview"
+            app:layout_constraintTop_toTopOf="@+id/total_confirmed_textview"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/daily_deaths_textview"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:text="todayDeaths"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1"
+            android:textAllCaps="true"
+            android:textColor="@color/textColorOvershadow"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/daily_confirmed_textview"
+            app:layout_constraintStart_toStartOf="@+id/total_deaths_textview"
+            app:layout_constraintTop_toTopOf="@+id/daily_confirmed_textview" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
