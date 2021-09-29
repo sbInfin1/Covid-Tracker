@@ -12,7 +12,7 @@
         android:id="@+id/pane"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp">
+        android:layout_margin="8dp">
 
         <TextView
             android:id="@+id/state_name_textview"
@@ -36,23 +36,23 @@
             android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="12dp"
-            android:text="cases"
+            android:layout_marginTop="4dp"
             android:ellipsize="end"
             android:fontFamily="sans-serif-medium"
             android:maxLines="1"
+            android:text="cases"
             android:textAllCaps="true"
             android:textColor="@color/textColorHighlight"
             android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/state_name_textview"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_cases_label" />
 
         <TextView
             android:id="@+id/daily_confirmed_textview"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:ellipsize="end"
             android:fontFamily="sans-serif-medium"
             android:maxLines="1"
@@ -63,7 +63,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/total_confirmed_textview"
             app:layout_constraintTop_toBottomOf="@+id/total_confirmed_textview"
-            app:layout_constraintVertical_bias="0.027" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/total_deaths_textview"
@@ -96,6 +96,38 @@
             app:layout_constraintBottom_toBottomOf="@+id/daily_confirmed_textview"
             app:layout_constraintStart_toStartOf="@+id/total_deaths_textview"
             app:layout_constraintTop_toTopOf="@+id/daily_confirmed_textview" />
+
+        <TextView
+            android:id="@+id/tv_cases_label"
+            android:layout_width="75dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1"
+            android:text="Cases"
+            android:textAllCaps="true"
+            android:textColor="@color/textColorOvershadow"
+            android:textSize="8sp"
+            app:layout_constraintEnd_toEndOf="@+id/total_confirmed_textview"
+            app:layout_constraintStart_toStartOf="@+id/total_confirmed_textview"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_deaths_label"
+            android:layout_width="75dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1"
+            android:text="Deaths"
+            android:textAllCaps="true"
+            android:textColor="@color/textColorOvershadow"
+            android:textSize="8sp"
+            app:layout_constraintEnd_toEndOf="@+id/total_deaths_textview"
+            app:layout_constraintStart_toStartOf="@+id/total_deaths_textview"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
